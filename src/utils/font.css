@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "AcuminLight";
+  src: url(/src/assets/fonts/AcuminVariableConcept.otf) format("opentype");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcuminRegular";
+  src: url(/src/assets/fonts/AcuminVariableConcept.otf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcuminMedium";
+  src: url(/src/assets/fonts/AcuminVariableConcept.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcuminSemibold";
+  src: url(/src/assets/fonts/AcuminVariableConcept.otf) format("opentype");
+  font-weight: 650;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcuminBold";
+  src: url(/src/assets/fonts/AcuminVariableConcept.otf) format("opentype");
+  font-weight: 750;
+  font-style: normal;
+}
+
+body {
+  font-family: "AcuminLight", sans-serif;
+  font-size: 1rem;
+  color: #242323;
+  line-height: 1.8rem;
+}
+
+h1 {
+  font-family: "AcuminBold", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-family: "AcuminBold", sans-serif;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "AcuminSemibold", sans-serif;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "AcuminMedium", sans-serif;
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-family: "AcuminMedium", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: "AcuminRegular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.italic {
+  font-style: italic;
+}

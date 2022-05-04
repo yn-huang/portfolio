@@ -1,0 +1,29 @@
+.photo-container {
+  margin-bottom: 50px;
+}
+
+.photo-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .photo-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

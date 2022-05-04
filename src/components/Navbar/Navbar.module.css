@@ -1,0 +1,19 @@
+#mainNav {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+  width: 30px;
+  margin-right: 20px;
+}
+
+#navBrand:hover {
+  text-decoration: none;
+}
+
+#navBrand span {
+  color: #96b7db;
+  font-family: "AcuminRegular", sans-serif;
+  font-size: 1rem;
+}

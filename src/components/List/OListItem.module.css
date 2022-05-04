@@ -1,0 +1,10 @@
+.olist-item {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+.olist-item:last-child {
+  margin-bottom: 0;
+}

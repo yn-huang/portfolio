@@ -1,0 +1,10 @@
+.ulist-item {
+  list-style-type: "\1F449";
+  list-style-position: outside;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+.ulist-item:last-child {
+  margin-bottom: 0;
+}
