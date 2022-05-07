@@ -115,7 +115,11 @@ export default function Gateway() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -133,7 +137,11 @@ export default function Gateway() {
         </AnimationOnScroll>
 
         {/* Feature #1 */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TextImgR
             title="Features"
             subtitle="1. Login & Sign Up"
@@ -151,7 +159,11 @@ export default function Gateway() {
         </AnimationOnScroll>
 
         {/* Feature #2 */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TextImgL
             subtitle="2. Make New Post"
             img="Develop/Gateway/Gateway_NewPost.gif"
@@ -167,7 +179,11 @@ export default function Gateway() {
         </AnimationOnScroll>
 
         {/* Feature #3 */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TextImgR
             subtitle="3. Edit Post"
             img="Develop/Gateway/Gateway_EditPost.gif"
@@ -182,7 +198,11 @@ export default function Gateway() {
         </AnimationOnScroll>
 
         {/* Feature #4 */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TextImgL
             subtitle="4. Make New Comment"
             img="Develop/Gateway/Gateway_NewComment.gif"
@@ -198,7 +218,11 @@ export default function Gateway() {
         </AnimationOnScroll>
 
         {/* Feature #5 */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TextImgR
             subtitle="5. Reply Comment"
             img="Develop/Gateway/Gateway_ReplyComment.gif"

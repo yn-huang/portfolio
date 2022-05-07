@@ -150,7 +150,11 @@ export default function BonVoyageAndFar() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -168,7 +172,11 @@ export default function BonVoyageAndFar() {
         </AnimationOnScroll>
 
         {/* Inspirations */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Inspirations"
             color={metadata.color}
@@ -197,7 +205,11 @@ export default function BonVoyageAndFar() {
         </AnimationOnScroll>
 
         {/* Inspirations Images */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <FourImg
             img1="Design/BonVoyageAndFar/BonVoyageAndFar_Inspiration1.png"
             img2="Design/BonVoyageAndFar/BonVoyageAndFar_Inspiration2.png"
@@ -207,7 +219,11 @@ export default function BonVoyageAndFar() {
         </AnimationOnScroll>
 
         {/* Design Thinking */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Design Thinking"
             color={metadata.color}
@@ -233,7 +249,11 @@ export default function BonVoyageAndFar() {
         </AnimationOnScroll>
 
         {/* Final */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TwoImg
             img1="Design/BonVoyageAndFar/BonVoyageAndFar_Final1.png"
             img2="Design/BonVoyageAndFar/BonVoyageAndFar_Final2.png"

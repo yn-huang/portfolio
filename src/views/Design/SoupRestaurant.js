@@ -153,7 +153,11 @@ export default function SoupRestaurant() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -172,7 +176,11 @@ export default function SoupRestaurant() {
         </AnimationOnScroll>
 
         {/* Experimentation */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Experimentation"
             color={metadata.color}
@@ -193,12 +201,20 @@ export default function SoupRestaurant() {
         </AnimationOnScroll>
 
         {/* Experimentation Image */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <OneImgS img="Design/SoupRestaurant/SoupRestaurant_Draft2.png" />
         </AnimationOnScroll>
 
         {/* Final Design */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Final Design"
             color={metadata.color}
@@ -213,7 +229,11 @@ export default function SoupRestaurant() {
         </AnimationOnScroll>
 
         {/* Final Mockup */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <OneImgM img="Design/SoupRestaurant/SoupRestaurant_Final.png" />
         </AnimationOnScroll>
 

@@ -112,7 +112,11 @@ export default function AllAboutDesserts() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -134,7 +138,11 @@ export default function AllAboutDesserts() {
         </AnimationOnScroll>
 
         {/* Design Thinking */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Design Thinking"
             color={metadata.color}
@@ -155,7 +163,11 @@ export default function AllAboutDesserts() {
         </AnimationOnScroll>
 
         {/* Final Mockup */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TwoImg
             img1="Design/AllAboutDesserts/AllAboutDesserts_Mockup1.png"
             img2="Design/AllAboutDesserts/AllAboutDesserts_Mockup2.png"

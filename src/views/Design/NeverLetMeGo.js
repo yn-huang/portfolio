@@ -152,7 +152,11 @@ export default function NeverLetMeGo() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -170,7 +174,11 @@ export default function NeverLetMeGo() {
         </AnimationOnScroll>
 
         {/* Drafts */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph subtitle="Drafts" color={metadata.color} ref={draftRef}>
             <p>
               I first selected three books that I have read before:{" "}
@@ -187,7 +195,11 @@ export default function NeverLetMeGo() {
         </AnimationOnScroll>
 
         {/* Drafts Images */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <ThreeImg
             img1="Design/NeverLetMeGo/NeverLetMeGo_Draft1.png"
             img2="Design/NeverLetMeGo/NeverLetMeGo_Draft2.png"
@@ -196,7 +208,11 @@ export default function NeverLetMeGo() {
         </AnimationOnScroll>
 
         {/* Design Thinking */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Design Thinking"
             color={metadata.color}
@@ -217,7 +233,11 @@ export default function NeverLetMeGo() {
         </AnimationOnScroll>
 
         {/* Final Mockup */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <OneImgL img="Design/NeverLetMeGo/NeverLetMeGo_Mockup.png" />
         </AnimationOnScroll>
 

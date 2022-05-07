@@ -114,7 +114,11 @@ export default function SoupRestaurant() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -136,7 +140,11 @@ export default function SoupRestaurant() {
         </AnimationOnScroll>
 
         {/* Features */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <TextImgR
             subtitle="React"
             img="Develop/SoupRestaurant/SoupRestaurant_Develop_Demo.gif"

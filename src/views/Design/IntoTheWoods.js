@@ -150,7 +150,11 @@ export default function IntoTheWoods() {
       {/* main article section */}
       <article>
         {/* Overview */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Overview
             color={metadata.color}
             title={metadata.title}
@@ -169,7 +173,11 @@ export default function IntoTheWoods() {
         </AnimationOnScroll>
 
         {/* Inspirations */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Inspirations"
             color={metadata.color}
@@ -184,12 +192,20 @@ export default function IntoTheWoods() {
         </AnimationOnScroll>
 
         {/* Inspirations Image */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <OneImgS img="Design/IntoTheWoods/IntoTheWoods_PosterInspiration.jpg" />
         </AnimationOnScroll>
 
         {/* Design Thinking */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <Paragraph
             subtitle="Design Thinking"
             color={metadata.color}
@@ -206,7 +222,11 @@ export default function IntoTheWoods() {
         </AnimationOnScroll>
 
         {/* Final Mockup */}
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={1.5}>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
           <OneImgL img="Design/IntoTheWoods/IntoTheWoods_Mockup.png" />
         </AnimationOnScroll>
 
