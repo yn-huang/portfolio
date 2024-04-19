@@ -11,7 +11,7 @@ import Footnav from "@/components/Footnav";
 import Paragraph from "@/components/Paragraph";
 import OneImgM from "@/components/OneImg/OneImgM";
 import OneImgS from "@/components/OneImg/OneImgS";
-import Sidenav from "@/components/Sidenav";
+// import Sidenav from "@/components/Sidenav";
 
 import bannerImg from "@/public/images/Design/SoupRestaurant/SoupRestaurant_Banner.png";
 import draftImg from "@/public/images/Design/SoupRestaurant/SoupRestaurant_Draft2.png";
@@ -35,99 +35,99 @@ export default function SoupRestaurant() {
   const overviewRef = useRef();
   const experimentationRef = useRef();
   const finalRef = useRef();
-  const [overviewIsActive, setOverviewIsActive] = useState(false);
-  const [experimentationIsActive, setExperimentationIsActive] = useState(false);
-  const [finalIsActive, setFinalIsActive] = useState(false);
+  // const [overviewIsActive, setOverviewIsActive] = useState(false);
+  // const [experimentationIsActive, setExperimentationIsActive] = useState(false);
+  // const [finalIsActive, setFinalIsActive] = useState(false);
 
-  // scroll to Overview section when sidenav clicked
-  const overviewClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      overviewRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Overview section when sidenav clicked
+  // const overviewClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setOverviewIsActive(true);
-    setExperimentationIsActive(false);
-    setFinalIsActive(false);
-  };
+  //   setOverviewIsActive(true);
+  //   setExperimentationIsActive(false);
+  //   setFinalIsActive(false);
+  // };
 
-  // scroll to Experimentation section when sidenav clicked
-  const experimentationClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      overviewRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Experimentation section when sidenav clicked
+  // const experimentationClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setExperimentationIsActive(true);
-    setOverviewIsActive(false);
-    setFinalIsActive(false);
-  };
+  //   setExperimentationIsActive(true);
+  //   setOverviewIsActive(false);
+  //   setFinalIsActive(false);
+  // };
 
-  // scroll to Final Design section when sidenav clicked
-  const finalClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      overviewRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Final Design section when sidenav clicked
+  // const finalClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setFinalIsActive(true);
-    setOverviewIsActive(false);
-    setExperimentationIsActive(false);
-  };
+  //   setFinalIsActive(true);
+  //   setOverviewIsActive(false);
+  //   setExperimentationIsActive(false);
+  // };
 
-  // detect which sidenav's navlink should be displayed active
-  const scrollHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
+  // // detect which sidenav's navlink should be displayed active
+  // const scrollHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
 
-    if (
-      offset + window.innerHeight >=
-      finalRef.current.offsetTop + finalRef.current.clientHeight
-    ) {
-      // scrolled to Final Design section
-      setOverviewIsActive(false);
-      setExperimentationIsActive(false);
-      setFinalIsActive(true);
-    } else if (
-      offset + window.innerHeight >=
-        experimentationRef.current.offsetTop  &&
-      offset <
-        experimentationRef.current.offsetTop +
-          experimentationRef.current.clientHeight
-    ) {
-      // scrolled to Experimentation section
-      setExperimentationIsActive(true);
-      setOverviewIsActive(false);
-      setFinalIsActive(false);
-    } else if (
-      offset + window.innerHeight >= overviewRef.current.offsetTop &&
-      offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
-    ) {
-      // scrolled to Overview section
-      setOverviewIsActive(true);
-      setExperimentationIsActive(false);
-      setFinalIsActive(false);
-    } else {
-      // scrolled to none of the above sections
-      setOverviewIsActive(false);
-      setFinalIsActive(false);
-      setExperimentationIsActive(false);
-    }
-  };
+  //   if (
+  //     offset + window.innerHeight >=
+  //     finalRef.current.offsetTop + finalRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Final Design section
+  //     setOverviewIsActive(false);
+  //     setExperimentationIsActive(false);
+  //     setFinalIsActive(true);
+  //   } else if (
+  //     offset + window.innerHeight >=
+  //       experimentationRef.current.offsetTop  &&
+  //     offset <
+  //       experimentationRef.current.offsetTop +
+  //         experimentationRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Experimentation section
+  //     setExperimentationIsActive(true);
+  //     setOverviewIsActive(false);
+  //     setFinalIsActive(false);
+  //   } else if (
+  //     offset + window.innerHeight >= overviewRef.current.offsetTop &&
+  //     offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Overview section
+  //     setOverviewIsActive(true);
+  //     setExperimentationIsActive(false);
+  //     setFinalIsActive(false);
+  //   } else {
+  //     // scrolled to none of the above sections
+  //     setOverviewIsActive(false);
+  //     setFinalIsActive(false);
+  //     setExperimentationIsActive(false);
+  //   }
+  // };
 
-  // detect scroll event
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+  // // detect scroll event
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler);
 
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, []);
+  //   return () => window.removeEventListener("scroll", scrollHandler);
+  // }, []);
 
   return (
     <main>
       <Banner bannerImg={bannerImg} styles={{ backgroundSize: "50%" }} />
-      <Sidenav
+      {/* <Sidenav
         items={[
           {
             name: "Overview",
@@ -147,7 +147,7 @@ export default function SoupRestaurant() {
         ]}
         activeColor="#f58e6e"
         inactiveColor="lightgray"
-      />
+      /> */}
 
       {/* main article section */}
       <article>

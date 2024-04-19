@@ -11,7 +11,7 @@ import Footnav from "@/components/Footnav";
 import Paragraph from "@/components/Paragraph";
 import TwoImg from "@/components/TwoImg";
 import FourImg from "@/components/FourImg";
-import Sidenav from "@/components/Sidenav";
+// import Sidenav from "@/components/Sidenav";
 
 import bannerImg from "@/public/images/Design/BonVoyageAndFar/BonVoyageAndFar_Banner.png";
 import insp1Img from "@/public/images/Design/BonVoyageAndFar/BonVoyageAndFar_Inspiration1.png";
@@ -39,98 +39,98 @@ export default function BonVoyageAndFar() {
   const overviewRef = useRef();
   const inspirationRef = useRef();
   const designThinkingRef = useRef();
-  const [overviewIsActive, setOverviewIsActive] = useState(false);
-  const [inspirationIsActive, setInspirationIsActive] = useState(false);
-  const [designThinkingIsActive, setDesignThinkingIsActive] = useState(false);
+  // const [overviewIsActive, setOverviewIsActive] = useState(false);
+  // const [inspirationIsActive, setInspirationIsActive] = useState(false);
+  // const [designThinkingIsActive, setDesignThinkingIsActive] = useState(false);
 
-  // scroll to Overview section when sidenav clicked
-  const overviewClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      overviewRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Overview section when sidenav clicked
+  // const overviewClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setOverviewIsActive(true);
-    setDesignThinkingIsActive(false);
-    setInspirationIsActive(false);
-  };
+  //   setOverviewIsActive(true);
+  //   setDesignThinkingIsActive(false);
+  //   setInspirationIsActive(false);
+  // };
 
-  // scroll to Inspirations section when sidenav clicked
-  const inspirationClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      inspirationRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Inspirations section when sidenav clicked
+  // const inspirationClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     inspirationRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setInspirationIsActive(true);
-    setOverviewIsActive(false);
-    setDesignThinkingIsActive(false);
-  };
+  //   setInspirationIsActive(true);
+  //   setOverviewIsActive(false);
+  //   setDesignThinkingIsActive(false);
+  // };
 
-  // scroll to Design Thinking section when sidenav clicked
-  const designThinkingClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      designThinkingRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Design Thinking section when sidenav clicked
+  // const designThinkingClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     designThinkingRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setDesignThinkingIsActive(true);
-    setOverviewIsActive(false);
-    setInspirationIsActive(false);
-  };
+  //   setDesignThinkingIsActive(true);
+  //   setOverviewIsActive(false);
+  //   setInspirationIsActive(false);
+  // };
 
-  // detect which sidenav's navlink should be displayed active
-  const scrollHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    if (
-      offset + window.innerHeight >=
-      designThinkingRef.current.offsetTop +
-        designThinkingRef.current.clientHeight
-    ) {
-      // scrolled to Design Thinking
-      setOverviewIsActive(false);
-      setInspirationIsActive(false);
-      setDesignThinkingIsActive(true);
-    } else if (
-      offset + window.innerHeight >=
-        inspirationRef.current.offsetTop &&
-      offset <
-        inspirationRef.current.offsetTop + inspirationRef.current.clientHeight
-    ) {
-      // scrolled to Inspirations
-      setInspirationIsActive(true);
-      setDesignThinkingIsActive(false);
-      setOverviewIsActive(false);
-    } else if (
-      offset + window.innerHeight >= overviewRef.current.offsetTop &&
-      offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
-    ) {
-      // scrolled to Overview
-      setOverviewIsActive(true);
-      setDesignThinkingIsActive(false);
-      setInspirationIsActive(false);
-    } else {
-      // scrolled to none of the above sections
-      setOverviewIsActive(false);
-      setDesignThinkingIsActive(false);
-      setInspirationIsActive(false);
-    }
-  };
+  // // detect which sidenav's navlink should be displayed active
+  // const scrollHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   if (
+  //     offset + window.innerHeight >=
+  //     designThinkingRef.current.offsetTop +
+  //       designThinkingRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Design Thinking
+  //     setOverviewIsActive(false);
+  //     setInspirationIsActive(false);
+  //     setDesignThinkingIsActive(true);
+  //   } else if (
+  //     offset + window.innerHeight >=
+  //       inspirationRef.current.offsetTop &&
+  //     offset <
+  //       inspirationRef.current.offsetTop + inspirationRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Inspirations
+  //     setInspirationIsActive(true);
+  //     setDesignThinkingIsActive(false);
+  //     setOverviewIsActive(false);
+  //   } else if (
+  //     offset + window.innerHeight >= overviewRef.current.offsetTop &&
+  //     offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Overview
+  //     setOverviewIsActive(true);
+  //     setDesignThinkingIsActive(false);
+  //     setInspirationIsActive(false);
+  //   } else {
+  //     // scrolled to none of the above sections
+  //     setOverviewIsActive(false);
+  //     setDesignThinkingIsActive(false);
+  //     setInspirationIsActive(false);
+  //   }
+  // };
 
-  // detect scroll event
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+  // // detect scroll event
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler);
 
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, []);
+  //   return () => window.removeEventListener("scroll", scrollHandler);
+  // }, []);
 
   return (
     <main>
       <Banner bannerImg={bannerImg} />
-      <Sidenav
+      {/* <Sidenav
         items={[
           {
             name: "Overview",
@@ -150,7 +150,7 @@ export default function BonVoyageAndFar() {
         ]}
         activeColor="#d9aebe"
         inactiveColor="lightgray"
-      />
+      /> */}
 
       {/* main article section */}
       <article>

@@ -11,7 +11,7 @@ import Footnav from "@/components/Footnav";
 import Paragraph from "@/components/Paragraph";
 import ThreeImg from "@/components/ThreeImg";
 import OneImgL from "@/components/OneImg/OneImgL";
-import Sidenav from "@/components/Sidenav";
+// import Sidenav from "@/components/Sidenav";
 
 import bannerImg from "@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Banner.png";
 import draft1Img from '@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft1.png'
@@ -37,90 +37,90 @@ export default function NeverLetMeGo() {
   const overviewRef = useRef();
   const draftRef = useRef();
   const designThinkingRef = useRef();
-  const [overviewIsActive, setOverviewIsActive] = useState(false);
-  const [draftIsActive, setDraftIsActive] = useState(false);
-  const [designThinkingIsActive, setDesignThinkingIsActive] = useState(false);
+  // const [overviewIsActive, setOverviewIsActive] = useState(false);
+  // const [draftIsActive, setDraftIsActive] = useState(false);
+  // const [designThinkingIsActive, setDesignThinkingIsActive] = useState(false);
 
-  // scroll to Overview section when sidenav clicked
-  const overviewClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      overviewRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Overview section when sidenav clicked
+  // const overviewClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setOverviewIsActive(true);
-    setDesignThinkingIsActive(false);
-    setDraftIsActive(false);
-  };
+  //   setOverviewIsActive(true);
+  //   setDesignThinkingIsActive(false);
+  //   setDraftIsActive(false);
+  // };
 
-  // scroll to Draft section when sidenav clicked
-  const draftClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y = draftRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Draft section when sidenav clicked
+  // const draftClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y = draftRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setDraftIsActive(true);
-    setOverviewIsActive(false);
-    setDesignThinkingIsActive(false);
-  };
+  //   setDraftIsActive(true);
+  //   setOverviewIsActive(false);
+  //   setDesignThinkingIsActive(false);
+  // };
 
-  // scroll to Design Thinking section when sidenav clicked
-  const designThinkingClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      designThinkingRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Design Thinking section when sidenav clicked
+  // const designThinkingClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     designThinkingRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setDesignThinkingIsActive(true);
-    setOverviewIsActive(false);
-    setDraftIsActive(false);
-  };
+  //   setDesignThinkingIsActive(true);
+  //   setOverviewIsActive(false);
+  //   setDraftIsActive(false);
+  // };
 
-  // detect which sidenav's navlink should be displayed active
-  const scrollHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    if (
-      offset + window.innerHeight >=
-      designThinkingRef.current.offsetTop +
-        designThinkingRef.current.clientHeight
-    ) {
-      // scrolled to Design Thinking section
-      setOverviewIsActive(false);
-      setDraftIsActive(false);
-      setDesignThinkingIsActive(true);
-    } else if (
-      offset + window.innerHeight >= draftRef.current.offsetTop &&
-      offset < draftRef.current.offsetTop + draftRef.current.clientHeight
-    ) {
-      // scrolled to Draft section
-      setDraftIsActive(true);
-      setDesignThinkingIsActive(false);
-      setOverviewIsActive(false);
-    } else if (
-      offset + window.innerHeight >= overviewRef.current.offsetTop &&
-      offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
-    ) {
-      // scrolled to Overview section
-      setOverviewIsActive(true);
-      setDesignThinkingIsActive(false);
-      setDraftIsActive(false);
-    } else {
-      // scrolled to none of the above sections
-      setOverviewIsActive(false);
-      setDesignThinkingIsActive(false);
-      setDraftIsActive(false);
-    }
-  };
+  // // detect which sidenav's navlink should be displayed active
+  // const scrollHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   if (
+  //     offset + window.innerHeight >=
+  //     designThinkingRef.current.offsetTop +
+  //       designThinkingRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Design Thinking section
+  //     setOverviewIsActive(false);
+  //     setDraftIsActive(false);
+  //     setDesignThinkingIsActive(true);
+  //   } else if (
+  //     offset + window.innerHeight >= draftRef.current.offsetTop &&
+  //     offset < draftRef.current.offsetTop + draftRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Draft section
+  //     setDraftIsActive(true);
+  //     setDesignThinkingIsActive(false);
+  //     setOverviewIsActive(false);
+  //   } else if (
+  //     offset + window.innerHeight >= overviewRef.current.offsetTop &&
+  //     offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Overview section
+  //     setOverviewIsActive(true);
+  //     setDesignThinkingIsActive(false);
+  //     setDraftIsActive(false);
+  //   } else {
+  //     // scrolled to none of the above sections
+  //     setOverviewIsActive(false);
+  //     setDesignThinkingIsActive(false);
+  //     setDraftIsActive(false);
+  //   }
+  // };
 
-  // detect scroll event
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+  // // detect scroll event
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler);
 
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, []);
+  //   return () => window.removeEventListener("scroll", scrollHandler);
+  // }, []);
 
   return (
     <main>
@@ -128,7 +128,7 @@ export default function NeverLetMeGo() {
         bannerImg={bannerImg}
         styles={{ backgroundPosition: "bottom" }}
       />
-      <Sidenav
+      {/* <Sidenav
         items={[
           {
             name: "Overview",
@@ -148,7 +148,7 @@ export default function NeverLetMeGo() {
         ]}
         activeColor="lightpink"
         inactiveColor="lightgray"
-      />
+      /> */}
 
       {/* main article section */}
       <article>

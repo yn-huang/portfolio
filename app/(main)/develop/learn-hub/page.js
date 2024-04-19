@@ -10,7 +10,7 @@ import Banner from "@/components/Banner";
 import Overview from "@/components/Overview";
 import Footnav from "@/components/Footnav";
 import UList from "@/components/List/UList";
-import Sidenav from "@/components/Sidenav";
+// import Sidenav from "@/components/Sidenav";
 import Paragraph from "@/components/Paragraph";
 
 const metadata = {
@@ -32,67 +32,67 @@ const yOffset = -50;
 export default function LearnHub() {
   const overviewRef = useRef();
   const featureRef = useRef();
-  const [overviewIsActive, setOverviewIsActive] = useState(false);
-  const [featureIsActive, setFeatureIsActive] = useState(false);
+  // const [overviewIsActive, setOverviewIsActive] = useState(false);
+  // const [featureIsActive, setFeatureIsActive] = useState(false);
 
-  // scroll to Overview section when sidenav clicked
-  const overviewClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y =
-      overviewRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Overview section when sidenav clicked
+  // const overviewClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y =
+  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setOverviewIsActive(true);
-    setFeatureIsActive(false);
-  };
+  //   setOverviewIsActive(true);
+  //   setFeatureIsActive(false);
+  // };
 
-  // scroll to Features section when sidenav clicked
-  const featureClickHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    const y = featureRef.current.getBoundingClientRect().top + offset + yOffset;
+  // // scroll to Features section when sidenav clicked
+  // const featureClickHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   const y = featureRef.current.getBoundingClientRect().top + offset + yOffset;
 
-    window.scrollTo({ top: y, behavior: "smooth" });
+  //   window.scrollTo({ top: y, behavior: "smooth" });
 
-    setFeatureIsActive(true);
-    setOverviewIsActive(false);
-  };
+  //   setFeatureIsActive(true);
+  //   setOverviewIsActive(false);
+  // };
 
-  // detect which sidenav's navlink should be displayed active
-  const scrollHandler = () => {
-    const offset = window.scrollY || window.pageYOffSet;
-    if (
-      offset + window.innerHeight >= overviewRef.current.offsetTop &&
-      offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
-    ) {
-      // scrolled to Overview section
-      setOverviewIsActive(true);
-      setFeatureIsActive(false);
-    } else if (
-      offset + window.innerHeight >=
-      featureRef.current.offsetTop + featureRef.current.clientHeight
-    ) {
-      // scrolled to Features section
-      setOverviewIsActive(false);
-      setFeatureIsActive(true);
-    } else {
-      // scrolled to none of the above sections
-      setOverviewIsActive(false);
-      setFeatureIsActive(false);
-    }
-  };
+  // // detect which sidenav's navlink should be displayed active
+  // const scrollHandler = () => {
+  //   const offset = window.scrollY || window.pageYOffSet;
+  //   if (
+  //     offset + window.innerHeight >= overviewRef.current.offsetTop &&
+  //     offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Overview section
+  //     setOverviewIsActive(true);
+  //     setFeatureIsActive(false);
+  //   } else if (
+  //     offset + window.innerHeight >=
+  //     featureRef.current.offsetTop + featureRef.current.clientHeight
+  //   ) {
+  //     // scrolled to Features section
+  //     setOverviewIsActive(false);
+  //     setFeatureIsActive(true);
+  //   } else {
+  //     // scrolled to none of the above sections
+  //     setOverviewIsActive(false);
+  //     setFeatureIsActive(false);
+  //   }
+  // };
 
   // detect scroll event
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler);
 
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, []);
+  //   return () => window.removeEventListener("scroll", scrollHandler);
+  // }, []);
 
   return (
     <main>
       <Banner bannerImg={bannerImg} />
-      <Sidenav
+      {/* <Sidenav
         items={[
           {
             name: "Overview",
@@ -107,7 +107,7 @@ export default function LearnHub() {
         ]}
         activeColor="#6D97C8"
         inactiveColor="lightgray"
-      />
+      /> */}
 
       {/* main article section */}
       <article>
