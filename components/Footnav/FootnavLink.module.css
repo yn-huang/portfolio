@@ -1,0 +1,8 @@
+.foot-hover-line {
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  
