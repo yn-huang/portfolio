@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import BannerButton from "@/components/Banner/BannerButton";
 import { paths } from "@/routes";
-import bannerImg from '@/public/images/Cover.png'
+import bannerImg from "@/public/images/Cover.png";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Banner
         bannerImg={bannerImg}
         styles={{
-          backgroundPosition: "bottom",
+          backgroundPosition: "center",
         }}
         class="d-flex flex-column flex-md-row justify-content-center align-items-center"
       >

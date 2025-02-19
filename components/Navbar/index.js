@@ -49,8 +49,7 @@ export default function Navbar() {
           className="justify-content-end"
         >
           <Nav className="me-auto">
-            <Navlink link={paths.develop.root}>Develop</Navlink>
-            <Navlink link={paths.design.root}>Design</Navlink>
+            <Navlink link={paths.work.root}>Work</Navlink>
             <Navlink link={paths.about}>About</Navlink>
           </Nav>
         </ReactNavbar.Collapse>
