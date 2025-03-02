@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import "animate.css/animate.min.css";
@@ -14,10 +14,10 @@ import OneImgL from "@/components/OneImg/OneImgL";
 // import Sidenav from "@/components/Sidenav";
 
 import bannerImg from "@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Banner.png";
-import draft1Img from '@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft1.png'
-import draft2Img from '@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft2.png'
-import draft3Img from '@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft3.png'
-import mockupImg from '@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Mockup.png'
+import draft1Img from "@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft1.png";
+import draft2Img from "@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft2.png";
+import draft3Img from "@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Draft3.png";
+import mockupImg from "@/public/images/Design/NeverLetMeGo/NeverLetMeGo_Mockup.png";
 
 const metadata = {
   color: "#CFC1C2",
@@ -26,7 +26,7 @@ const metadata = {
   type: "Book Cover Design",
   tools: "Adobe PS, ID",
   leftNav: "Into the Woods",
-  leftLink: paths.design.into_the_woods,
+  leftLink: paths.work.into_the_woods,
   rightNav: "",
   rightLink: "",
 };
@@ -124,10 +124,7 @@ export default function NeverLetMeGo() {
 
   return (
     <main>
-      <Banner
-        bannerImg={bannerImg}
-        styles={{ backgroundPosition: "bottom" }}
-      />
+      <Banner bannerImg={bannerImg} styles={{ backgroundPosition: "bottom" }} />
       {/* <Sidenav
         items={[
           {
@@ -205,9 +202,9 @@ export default function NeverLetMeGo() {
             img1={draft1Img}
             img2={draft2Img}
             img3={draft3Img}
-            img1Alt='Never Let Me Go Draft 1'
-            img2Alt='Never Let Me Go Draft 2'
-            img3Alt='Never Let Me Go Draft 3'
+            img1Alt="Never Let Me Go Draft 1"
+            img2Alt="Never Let Me Go Draft 2"
+            img3Alt="Never Let Me Go Draft 3"
             unoptimized
           />
         </AnimationOnScroll>
@@ -243,7 +240,11 @@ export default function NeverLetMeGo() {
           animateIn="animate__fadeInUp"
           duration={1.5}
         >
-          <OneImgL img={mockupImg} imgAlt='Never Let Me Go Mockup' unoptimized/>
+          <OneImgL
+            img={mockupImg}
+            imgAlt="Never Let Me Go Mockup"
+            unoptimized
+          />
         </AnimationOnScroll>
 
         {/* Footnav */}

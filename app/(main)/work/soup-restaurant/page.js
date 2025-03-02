@@ -24,9 +24,9 @@ const metadata = {
   type: "Logo Design",
   tools: "Adobe AI",
   leftNav: "Bon Voyage & Far",
-  leftLink: paths.design.bon_voyage_and_far,
+  leftLink: paths.work.bon_voyage_and_far,
   rightNav: "Into the Woods",
-  rightLink: paths.design.into_the_woods,
+  rightLink: paths.work.into_the_woods,
 };
 
 const yOffset = -50;
@@ -205,7 +205,7 @@ export default function SoupRestaurant() {
           animateIn="animate__fadeInUp"
           duration={1.5}
         >
-          <OneImgS img={draftImg} imgAlt="Soup Restaurant Drafts" unoptimized/>
+          <OneImgS img={draftImg} imgAlt="Soup Restaurant Drafts" unoptimized />
         </AnimationOnScroll>
 
         {/* Final Design */}
@@ -233,7 +233,7 @@ export default function SoupRestaurant() {
           animateIn="animate__fadeInUp"
           duration={1.5}
         >
-          <OneImgM img={finalImg} imgAlt="Soup Restaurant Final" unoptimized/>
+          <OneImgM img={finalImg} imgAlt="Soup Restaurant Final" unoptimized />
         </AnimationOnScroll>
 
         {/* Footnav */}

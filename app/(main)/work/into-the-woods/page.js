@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState, useRef, useEffect } from "react";
 import "animate.css/animate.min.css";
@@ -14,8 +14,8 @@ import OneImgL from "@/components/OneImg/OneImgL";
 // import Sidenav from "@/components/Sidenav";
 
 import bannerImg from "@/public/images/Design/IntoTheWoods/IntoTheWoods_Banner.png";
-import inspImg from '@/public/images/Design/IntoTheWoods/IntoTheWoods_PosterInspiration.jpg'
-import mokeupImg from '@/public/images/Design/IntoTheWoods/IntoTheWoods_Mockup.png'
+import inspImg from "@/public/images/Design/IntoTheWoods/IntoTheWoods_PosterInspiration.jpg";
+import mokeupImg from "@/public/images/Design/IntoTheWoods/IntoTheWoods_Mockup.png";
 
 const metadata = {
   color: "gray",
@@ -24,9 +24,9 @@ const metadata = {
   type: "Poster & Playbill Design",
   tools: "Adobe AI, ID",
   leftNav: "Soup Restaurant",
-  leftLink: paths.design.soup_restaurant,
+  leftLink: paths.work.soup_restaurant,
   rightNav: "Never Let Me Go",
-  rightLink: paths.design.never_let_me_go,
+  rightLink: paths.work.never_let_me_go,
 };
 
 const yOffset = -50;
@@ -198,7 +198,11 @@ export default function IntoTheWoods() {
           animateIn="animate__fadeInUp"
           duration={1.5}
         >
-          <OneImgS img={inspImg} imgAlt='Into the Woods Inspiration' unoptimized />
+          <OneImgS
+            img={inspImg}
+            imgAlt="Into the Woods Inspiration"
+            unoptimized
+          />
         </AnimationOnScroll>
 
         {/* Design Thinking */}
@@ -228,7 +232,7 @@ export default function IntoTheWoods() {
           animateIn="animate__fadeInUp"
           duration={1.5}
         >
-          <OneImgL img={mokeupImg} imgAlt='Into the Woods Mockup' unoptimized/>
+          <OneImgL img={mokeupImg} imgAlt="Into the Woods Mockup" unoptimized />
         </AnimationOnScroll>
 
         {/* Footnav */}

@@ -1,121 +1,43 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { ArrowDropUp } from "@mui/icons-material";
 
 import { paths } from "@/routes";
 import bannerImg from "@/public/images/Develop/Bloom/Bloom_Banner.png";
 import Banner from "@/components/Banner";
 import Overview from "@/components/Overview";
 import Footnav from "@/components/Footnav";
-import TextImgR from "@/components/TextImg/TextImgR";
-import TextImgL from "@/components/TextImg/TextImgL";
-import UList from "@/components/List/UList";
-// import Sidenav from "@/components/Sidenav";
+import TwoImg from "@/components/TwoImg";
+import Paragraph from "@/components/Paragraph";
+import OneImgM from "@/components/OneImg/OneImgM";
 
-import LoginImg from "@/public/images/Develop/Bloom/Bloom_SSO_Login.gif";
 import StudyTableImg from "@/public/images/Develop/Bloom/Bloom_Study_Table.png";
+import StudyTableAfterImg from "@/public/images/Develop/Bloom/Bloom_Study_Table_After.png";
 import ProcessMapImg from "@/public/images/Develop/Bloom/Bloom_Process_Map.png";
-import LockImg from "@/public/images/Develop/Bloom/Lock.png";
+import ProcessMapAfterImg from "@/public/images/Develop/Bloom/Bloom_Process_Map_After.png";
+import AccessibilityImg from "@/public/images/Develop/Bloom/Bloom_Accessibility.gif";
 
 const metadata = {
   color: "#5F697F",
   title: "Bloom",
-  date: "Aug 2022 - Present",
-  type: "Full Stack",
-  languages: "HTML, CSS, JavaScript",
-  tools:
-    "React, Node, Express, Neo4j, Oracle, Material UI, React Hook Form, SAML, Next.js",
+  date: "Feb 2024 - Aug 2024",
+  type: "Full Stack, UI/UX Design",
+  languages: "JavaScript",
+  tools: "React.js, Next.js, Material UI, Figma",
   liveLink: "https://bloom.crso.unc.edu/",
-  liveLinkDescription: "(only available to UNC and UNCH accounts)",
-  rightNav: "",
-  rightLink: "",
+  liveLinkDescription: "(only available to UNC and UNC-Health accounts)",
+  rightNav: "Bon Voyage & Far",
+  rightLink: paths.work.bon_voyage_and_far,
   leftNav: "",
   leftLink: "",
 };
 
-const yOffset = -50;
-
 export default function Bloom() {
-  const overviewRef = useRef();
-  const featureRef = useRef();
-  // const [overviewIsActive, setOverviewIsActive] = useState(false);
-  // const [featureIsActive, setFeatureIsActive] = useState(false);
-
-  // // scroll to Overview section when sidenav clicked
-  // const overviewClickHandler = () => {
-  //   const offset = window.scrollY || window.pageYOffSet;
-  //   const y =
-  //     overviewRef.current.getBoundingClientRect().top + offset + yOffset;
-
-  //   window.scrollTo({ top: y, behavior: "smooth" });
-
-  //   setOverviewIsActive(true);
-  //   setFeatureIsActive(false);
-  // };
-
-  // // scroll to Features section when sidenav clicked
-  // const featureClickHandler = () => {
-  //   const offset = window.scrollY || window.pageYOffSet;
-  //   const y = featureRef.current.getBoundingClientRect().top + offset + yOffset;
-
-  //   window.scrollTo({ top: y, behavior: "smooth" });
-
-  //   setFeatureIsActive(true);
-  //   setOverviewIsActive(false);
-  // };
-
-  // // detect which sidenav's navlink should be displayed active
-  // const scrollHandler = () => {
-  //   const offset = window.scrollY || window.pageYOffSet;
-  //   if (
-  //     offset + window.innerHeight >= overviewRef.current.offsetTop &&
-  //     offset < overviewRef.current.offsetTop + overviewRef.current.clientHeight
-  //   ) {
-  //     // scrolled to Overview section
-  //     setOverviewIsActive(true);
-  //     setFeatureIsActive(false);
-  //   } else if (
-  //     offset + window.innerHeight >=
-  //     featureRef.current.offsetTop + featureRef.current.clientHeight
-  //   ) {
-  //     // scrolled to Features section
-  //     setOverviewIsActive(false);
-  //     setFeatureIsActive(true);
-  //   } else {
-  //     // scrolled to none of the above sections
-  //     setOverviewIsActive(false);
-  //     setFeatureIsActive(false);
-  //   }
-  // };
-
-  // // detect scroll event
-  // useEffect(() => {
-  //   window.addEventListener("scroll", scrollHandler);
-
-  //   return () => window.removeEventListener("scroll", scrollHandler);
-  // }, []);
-
   return (
     <main>
       <Banner bannerImg={bannerImg} />
-      {/* <Sidenav
-        items={[
-          {
-            name: "Overview",
-            clickHandler: overviewClickHandler,
-            active: overviewIsActive,
-          },
-          {
-            name: "Features",
-            clickHandler: featureClickHandler,
-            active: featureIsActive,
-          },
-        ]}
-        activeColor="#178754"
-        inactiveColor="lightgray"
-      /> */}
 
       {/* main article section */}
       <article>
@@ -134,21 +56,158 @@ export default function Bloom() {
             tools={metadata.tools}
             liveLink={metadata.liveLink}
             liveLinkDescription={metadata.liveLinkDescription}
-            ref={overviewRef}
           >
-            Bloom is an award-winning process mapping web app that assists
-            research teams in understanding and navigating the steps required to
-            initiate clinical research studies (
+            Bloom is an award-winning process mapping web application that
+            assists research teams in understanding and navigating the steps
+            required to initiate clinical research studies (
             <a href="https://www.centerwatch.com/articles/26591-uncs-study-startup-mapping-tool-wins-wcg-innovation-challenge">
               Innovation Challenge at the 2023 MAGI East Clinical Research
               Conference
             </a>
-            ). I developed both the user and admin panel.
+            ). I overhauled the application by migrating from Create React App
+            to Next.js and redesigning the user interface.
           </Overview>
         </AnimationOnScroll>
 
-        {/* Feature #1 */}
+        {/* 1. CRA to Next.js */}
         <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <Paragraph subtitle="CRA to Next.js" color={metadata.color}>
+            <p className="mb-3">
+              Since Create React App (CRA) was no longer the recommended
+              approach for building React applications, I proposed migrating
+              Bloom to the Next.js framework. We considered using Vite instead,
+              as it offered an easier migration path for the existing app.
+              However, we ultimately chose Next.js due to its Server-Side
+              Rendering (SSR) capabilities, which greatly enhance performance
+              and reduce initial load times.
+            </p>
+          </Paragraph>
+        </AnimationOnScroll>
+
+        {/* 2. Theming */}
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <Paragraph subtitle="Theming" color={metadata.color}>
+            <p className="mb-3">
+              To ensure a cohesive UI design, I used Material UI (MUI) for theme
+              customization. The MUI theme provider enables seamless transitions
+              between themes. I created both a default theme and an
+              accessibility-focused theme, incorporating color choices that are
+              more accommodating for color blind users.
+            </p>
+          </Paragraph>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <OneImgM
+            img={AccessibilityImg}
+            imgAlt="Accessibility Theme Toggle"
+            unoptimized
+          />
+        </AnimationOnScroll>
+
+        {/* 3. Design */}
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <Paragraph subtitle="Design" color={metadata.color}>
+            <p className="mb-3">
+              {`Another objective of this overhaul is to improve the user experience, with the aim of retaining more active users in the application.`}
+            </p>
+          </Paragraph>
+        </AnimationOnScroll>
+
+        {/* 4. My Studies Page */}
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <Paragraph subtitle="My Studies Page" color={metadata.color}>
+            <p className="mb-3">
+              {`The initial design presented information scattered across the table, making navigation overwhelming for users. 
+              To improve clarity, I relocated non-essential details, like the study description and collaborators, to a dedicated "Study Details" page. 
+              Additionally, I nested the delete process map button under an ellipsis icon to prevent accidental clicks.`}
+            </p>
+          </Paragraph>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <TwoImg
+            img1={StudyTableImg}
+            img2={StudyTableAfterImg}
+            img1Alt="Study Table Before Redesign"
+            img2Alt="Study Table After Redesign"
+            unoptimized
+          />
+        </AnimationOnScroll>
+
+        {/* 5. Process Map Page */}
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <Paragraph subtitle="Process Map Page" color={metadata.color}>
+            <p className="mb-3">
+              The left navigation bar took up too much space, so I relocated it
+              to the top of the page to free up horizontal space. Additionally,
+              I introduced two side panels for the checklist and node
+              descriptions, which can overlay the process map. Users can now
+              zoom in and out of the process map using the mouse scroll,
+              eliminating the need to scroll the entire page to adjust their
+              view.
+            </p>
+          </Paragraph>
+        </AnimationOnScroll>
+
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <TwoImg
+            img1={ProcessMapImg}
+            img2={ProcessMapAfterImg}
+            img1Alt="Process Map Before Redesign"
+            img2Alt="Process Map After Redesign"
+            unoptimized
+          />
+        </AnimationOnScroll>
+
+        {/* 6. Metrics */}
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate__fadeInUp"
+          duration={1.5}
+        >
+          <Paragraph subtitle="Metrics" color={metadata.color}>
+            <p className="mb-3">
+              <ArrowDropUp color="success" />
+              30% increase in active users
+            </p>
+          </Paragraph>
+        </AnimationOnScroll>
+
+        {/* Feature #1 */}
+        {/* <AnimationOnScroll
           animateOnce={true}
           animateIn="animate__fadeInUp"
           duration={1.5}
@@ -167,10 +226,9 @@ export default function Bloom() {
               ]}
             />
           </TextImgR>
-        </AnimationOnScroll>
-
+        </AnimationOnScroll> */}
         {/* Feature #2 */}
-        <AnimationOnScroll
+        {/* <AnimationOnScroll
           animateOnce={true}
           animateIn="animate__fadeInUp"
           duration={1.5}
@@ -189,10 +247,9 @@ export default function Bloom() {
               ]}
             />
           </TextImgL>
-        </AnimationOnScroll>
-
+        </AnimationOnScroll> */}
         {/* Feature #3 */}
-        <AnimationOnScroll
+        {/* <AnimationOnScroll
           animateOnce={true}
           animateIn="animate__fadeInUp"
           duration={1.5}
@@ -210,28 +267,7 @@ export default function Bloom() {
               ]}
             />
           </TextImgR>
-        </AnimationOnScroll>
-
-        {/* Feature #4 */}
-        <AnimationOnScroll
-          animateOnce={true}
-          animateIn="animate__fadeInUp"
-          duration={1.5}
-        >
-          <TextImgL
-            subtitle="4. Work in Progress"
-            img={LockImg}
-            imgAlt="New Post Gif"
-            color={metadata.color}
-            unoptimized
-          >
-            <UList
-              items={[
-                "Because Create React App (CRA) is no longer a recommended solution for creating React applications, we are working on switching Bloom to Next.js framework with a new interface layout.",
-              ]}
-            />
-          </TextImgL>
-        </AnimationOnScroll>
+        </AnimationOnScroll> */}
 
         {/* Footnav */}
         <Footnav

@@ -27,10 +27,10 @@ const metadata = {
   date: "Oct 2020",
   type: "Poster Design",
   tools: "Adobe PS",
-  leftNav: "Bloom Redesign",
-  leftLink: paths.design.bloom,
+  leftNav: "Bloom",
+  leftLink: paths.work.bloom,
   rightNav: "Soup Restaurant",
-  rightLink: paths.design.soup_restaurant,
+  rightLink: paths.work.soup_restaurant,
 };
 
 const yOffset = -50;
