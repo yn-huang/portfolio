@@ -3,7 +3,7 @@ import { paths } from "@/routes";
 
 const projects = [
   {
-    title: "NC Enviroscan",
+    title: "NC Enviroscan [In Progress]",
     description:
       "An web application that allows users to visualize trends across environmental contaminants, sociodemographic information, environmental justice indicators, and health outcomes throughout North Carolina",
     tools: "Figma",
