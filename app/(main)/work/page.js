@@ -3,6 +3,15 @@ import { paths } from "@/routes";
 
 const projects = [
   {
+    title: "NC Enviroscan",
+    description:
+      "An web application that allows users to visualize trends across environmental contaminants, sociodemographic information, environmental justice indicators, and health outcomes throughout North Carolina",
+    tools: "Figma",
+    color: "#d1d4da",
+    desktopImg: "Lock_Card_Desktop.png",
+    mobileImg: "Lock_Card_Mobile.png",
+  },
+  {
     link: paths.work.bloom,
     title: "Bloom",
     description:
