@@ -20,7 +20,7 @@ import ProcessMapAfterImg from "@/public/images/Develop/Bloom/Bloom_Process_Map_
 import AccessibilityImg from "@/public/images/Develop/Bloom/Bloom_Accessibility.gif";
 
 const metadata = {
-  color: "#5F697F",
+  color: "#4f758b",
   title: "Bloom",
   date: "Feb 2024 - Aug 2024",
   type: "Full Stack, UI/UX Design",
