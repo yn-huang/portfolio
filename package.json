@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,7 @@
     "@mui/material": "^6.4.6",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.2",
-    "next": "^16.0.10",
+    "next": "^16.2.4",
     "react": "^19.2.3",
     "react-animation-on-scroll": "^5.1.0",
     "react-bootstrap": "^2.10.2",

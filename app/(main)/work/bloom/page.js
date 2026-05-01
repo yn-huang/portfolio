@@ -1,10 +1,7 @@
 "use client";
-
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { ArrowDropUp } from "@mui/icons-material";
-
-import { paths } from "@/routes";
 import bannerImg from "@/public/images/Develop/Bloom/Bloom_Banner.png";
 import Banner from "@/components/Banner";
 import Overview from "@/components/Overview";
@@ -12,7 +9,6 @@ import Footnav from "@/components/Footnav";
 import TwoImg from "@/components/TwoImg";
 import Paragraph from "@/components/Paragraph";
 import OneImgM from "@/components/OneImg/OneImgM";
-
 import StudyTableImg from "@/public/images/Develop/Bloom/Bloom_Study_Table.png";
 import StudyTableAfterImg from "@/public/images/Develop/Bloom/Bloom_Study_Table_After.png";
 import ProcessMapImg from "@/public/images/Develop/Bloom/Bloom_Process_Map.png";
@@ -28,8 +24,8 @@ const metadata = {
   tools: "React.js, Next.js, Material UI, Figma",
   liveLink: "https://bloom.crso.unc.edu/",
   liveLinkDescription: "(only available to UNC and UNC-Health accounts)",
-  rightNav: "Bon Voyage & Far",
-  rightLink: paths.work.bon_voyage_and_far,
+  rightNav: "",
+  rightLink: "",
   leftNav: "",
   leftLink: "",
 };
